@@ -1,4 +1,4 @@
-#Data Analysis Portfolio
+Data Analysis Portfolio
 ---
-##Table of Contents
+Table of Contents
 ---

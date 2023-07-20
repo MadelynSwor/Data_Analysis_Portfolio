@@ -1,4 +1,4 @@
-Madelyn Swor -- Data Analysis Portfolio
+Data Analysis Portfolio
 ---
 Table of Contents
 ---

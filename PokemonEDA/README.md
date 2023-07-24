@@ -106,6 +106,15 @@ WHERE rank_num = 1
 ORDER BY base_total DESC,type1,type2
 ```
 
-<img src="https://raw.githubusercontent.com/MadelynSwor/Data_Analysis_Portfolio/main/PokemonEDA/Visuals/SQLResultQuery2.png">
+<img src="https://raw.githubusercontent.com/MadelynSwor/Data_Analysis_Portfolio/main/PokemonEDA/Visuals/SQLResultQuery2.png"> 
+<br>
 
 This gives us 18 potential Pokémon for our team of six. When selecting Pokémon from this list, we need to keep in mind all of our team’s types. Here’s a visual of what Pokémon from our output can be on what starter team.
+
+<div align="center">
+<img src="https://raw.githubusercontent.com/MadelynSwor/Data_Analysis_Portfolio/main/PokemonEDA/Visuals/venndiagramStarters.png" height = "500">
+</div>  <br> 
+
+Now that we know which of the potential teammates can be matched to which starter, we can start choosing the best Pokémon for each starter. Let’s organize our list of candidates by ```type1```, ```type2```, and ```base_total```.
+
+

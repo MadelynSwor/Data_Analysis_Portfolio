@@ -27,6 +27,9 @@ Before we comb through the dataset there are a few things to consider.
 >> * Players start out the game choosing a starter Pokémon that is either fire, water, or grass type. Being the first Pokémon given to the players, many fans become attached to their starter and keep them on their team throughout the game. <br>
 >>* In Pokémon X & Y the starters are Greninja, Chesnaught, and Delphox respectively.
 
+<div align="center">
+<img src="https://raw.githubusercontent.com/MadelynSwor/Data_Analysis_Portfolio/main/PokemonEDA/Visuals/alltogetherNow.png" height="150" >
+</div>
 
 ### 3. Pokémon Types; Advantages and Disadvantages
 
@@ -50,11 +53,11 @@ The 12 gym leaders in Pokémon X&Y are **bug, rock, fighting, grass, electric, f
 
 ```SQL
 WITH againstCTE AS ( -- Finding weakness of primary type
-select name,type1,type2,
-SUM(against_fire+against_water+against_electric+against_grass+against_ice+against_fight+
+SELECT name,type1,type2,
+	SUM(against_fire+against_water+against_electric+against_grass+against_ice+against_fight+
 	against_psychic+against_bug+against_rock+ against_dragon+against_steel+against_fairy) AS total_weakness
-from pokemon..pokemonAgainst
-group by name,type1,type2
+FROM pokemon..pokemonAgainst
+GROUP BY name,type1,type2
 )
 SELECT type1, ROUND(AVG(total_weakness),1) AS avg_weakness
 FROM againstCTE

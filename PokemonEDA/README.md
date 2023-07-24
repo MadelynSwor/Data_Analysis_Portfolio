@@ -117,4 +117,8 @@ This gives us 18 potential Pokémon for our team of six. When selecting Pokémon
 
 Now that we know which of the potential teammates can be matched to which starter, we can start choosing the best Pokémon for each starter. Let’s organize our list of candidates by ```type1```, ```type2```, and ```base_total```.
 
+<div align="center">
+<img src="https://raw.githubusercontent.com/MadelynSwor/Data_Analysis_Portfolio/main/PokemonEDA/Visuals/teammatesBase.png">
+</div>
 
+The top two highest ```base_total``` are the Pokémon Scizor and Florges. Since Scizor is a bug steel type and Florges is a fairy type, both Pokémon can be placed in any starter team.

@@ -11,4 +11,4 @@ Before diving into the process of picking the best team, what is Pokémon? Poké
 The first step to building your team is choosing which types of Pokémon. The game has a total of **_18_ _different_ _types_**. Each type has multiple advantages and disadvantages. For example, as shown in the image below, fire is strong against grass but weak against water. 
 
 
-![All Pokemon Types](https://github.com/MadelynSwor/Data_Analysis_Portfolio/tree/main/PokemonEDA/Visuals/pokemonTypes.png)
+![All Pokemon Types]([PokemonEDA/Visuals/pokemonTypes.png])

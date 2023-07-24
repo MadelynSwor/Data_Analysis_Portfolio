@@ -105,3 +105,7 @@ FROM ctePossibleTeam
 WHERE rank_num = 1
 ORDER BY base_total DESC,type1,type2
 ```
+
+<img src="https://raw.githubusercontent.com/MadelynSwor/Data_Analysis_Portfolio/main/PokemonEDA/Visuals/SQLResultQuery2.png">
+
+This gives us 18 potential Pokémon for our team of six. When selecting Pokémon from this list, we need to keep in mind all of our team’s types. Here’s a visual of what Pokémon from our output can be on what starter team.

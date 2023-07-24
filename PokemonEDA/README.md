@@ -121,4 +121,45 @@ Now that we know which of the potential teammates can be matched to which starte
 <img src="https://raw.githubusercontent.com/MadelynSwor/Data_Analysis_Portfolio/main/PokemonEDA/Visuals/teammatesBase.png">
 </div>
 
-The top two highest ```base_total``` are the Pokémon Scizor and Florges. Since Scizor is a bug steel type and Florges is a fairy type, both Pokémon can be placed in any starter team.
+The top two highest ```base_total``` are the Pokémon _Scizor_ and _Florges_. Since _Scizor_ is a bug steel type and _Florges_ is a fairy type, both Pokémon can be placed in any starter team. This leaves us three open slots on each team.
+
+<div align="center">
+<img src="https://raw.githubusercontent.com/MadelynSwor/Data_Analysis_Portfolio/main/PokemonEDA/Visuals/chesnaughtTeamPT1.png" width="400">
+</div>
+<div align="center">
+<img src="https://raw.githubusercontent.com/MadelynSwor/Data_Analysis_Portfolio/main/PokemonEDA/Visuals/gregninjaTeamPT1.png"width="400">
+</div>
+<div align="center">
+<img src="https://raw.githubusercontent.com/MadelynSwor/Data_Analysis_Portfolio/main/PokemonEDA/Visuals/delphoxTeamPT1.png"width="400">
+</div>   <br>
+
+Next we choose the next Pokémon with the highest ```base_total```, _Venusaur_. However, since venusaur is a grass poison type, it can’t be on Chesnaught’s team since Chesnaught is a grass fighting type. For Chesnaught’s team, the next Pokémon with the highest ```base_total``` that doesn’t overlap types would be _Kingdra_.
+
+<div align="center">
+<img src="https://raw.githubusercontent.com/MadelynSwor/Data_Analysis_Portfolio/main/PokemonEDA/Visuals/ChesnaughtTeamPT2.png"width="400">
+</div>
+<div align="center">
+<img src="https://raw.githubusercontent.com/MadelynSwor/Data_Analysis_Portfolio/main/PokemonEDA/Visuals/GregTeamPT2.png"width="400">
+</div>
+<div align="center">
+<img src="https://raw.githubusercontent.com/MadelynSwor/Data_Analysis_Portfolio/main/PokemonEDA/Visuals/delphoxTeamPT2.png"width="400">
+</div>    <br>
+
+Using this method of elimination of the highest ```base_total``` with types not already on the team, this is our final result.
+
+<div align="center">
+<img src="https://raw.githubusercontent.com/MadelynSwor/Data_Analysis_Portfolio/main/PokemonEDA/Visuals/ChesnaughtTeamPT3.png"width="400">
+</div>
+<div align="center">
+<img src="https://raw.githubusercontent.com/MadelynSwor/Data_Analysis_Portfolio/main/PokemonEDA/Visuals/GregTeamPT3.png"width="400">
+</div>
+<div align="center">
+<img src="https://raw.githubusercontent.com/MadelynSwor/Data_Analysis_Portfolio/main/PokemonEDA/Visuals/DelTeamPT3.png"width="400">
+</div>    <br>
+
+
+### The Best Pokémon for each Starter Team:
+	* Greninja, Scizor, Florges, Jolteon, Venusaur, Flareon
+	* Chesnaught, Scizor, Florges, Jolteon, Kingdra, Flareon
+	* Delphox, Scizor, Florges, Jolteon, Venusaur, Kingdra
+

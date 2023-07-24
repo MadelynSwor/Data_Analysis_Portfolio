@@ -8,4 +8,11 @@ Before diving into the process of picking the best team, what is Pokémon? Poké
 
 ### 2. Pokémon Types; Advantages and Disadvantages
 
-The first step to building your team is choosing which types of Pokémon. The game has a total of **_18_ _different_ _types_**. Each type has multiple advantages and disadvantages. For example, as shown in the image below, fire is strong against grass but weak against water. 
+The first step to building your team is choosing which types of Pokémon. The game has a total of **_18_ _different_ _types_**. Each type has multiple advantages and disadvantages. As shown in the image below, fire pokemon are strong against grass but weak against water. <br>
+
+<div align="center"> 
+<img src="https://raw.githubusercontent.com/MadelynSwor/Data_Analysis_Portfolio/main/PokemonEDA/Visuals/pokemonTypes.png" width="500">      
+</div>  <br>  
+    
+The chart below shows how weak one type is against another. The lower the number, the more resistant that type is. We see in our first row that the bug type is more resistant to fighting, grass, and ground, but weaker to fire, flying, and rock types. Gray cells with the value ```1.000``` are attacks that deal normal damage.
+

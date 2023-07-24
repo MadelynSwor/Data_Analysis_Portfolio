@@ -65,6 +65,43 @@ WHERE type2 IS NULL
 GROUP BY type1
 ORDER BY AVG(total_weakness) ASC;
 ```
+<img src="https://raw.githubusercontent.com/MadelynSwor/Data_Analysis_Portfolio/main/PokemonEDA/Visuals/SQLResultQuery1.png">
 
+Looking at the output of our query, we see steel is the most resistant, whereas rock and ice are tied for being the least. In selecting resistant Pokémon for our team, we’ll limit our search to Pokémon that have at least one type in steel, ghost, electric, fairy, poison, fire, psychic, water, dragon, normal, fighting, or bug. 
 
+To limit our search further we’ll use a rank system. We’re interested in finding Pokémon with the max base total stat for each unique combination of ```type1``` and ```type2```. 
 
+```SQL
+SELECT * INTO #tmpPokedex FROM ( --pokedex, but only pokemon from x & y
+	SELECT agst.pokedex_number,
+		   agst.name,
+		   agst.type1,
+		   agst.type2,
+		   dex.base_total,
+		   SUM(against_fire+against_water+against_electric+against_grass+against_ice+against_fight+
+		   against_psychic+against_bug+against_rock+ against_dragon+against_steel+against_fairy) AS total_weakness
+	FROM pokedex dex
+	RIGHT JOIN xyPokemon xy 
+	ON dex.pokedex_number = xy.pokedex_num 
+	JOIN pokemonAgainst agst
+	ON dex.pokedex_number = agst.pokedex_number
+	WHERE is_legendary = 0
+	GROUP BY agst.pokedex_number,agst.name,agst.type1,agst.type2,dex.base_total
+) as tmpPokedex
+
+WITH ctePossibleTeam AS (  --ensures the top base_total for Pokémon of that combination of type1 and type2
+	SELECT *,
+		rank() OVER(PARTITION BY type1,type2 ORDER BY base_total DESC) as rank_num
+	FROM #tmpPokedex
+	WHERE 
+		total_weakness <= 12.75 AND 
+		base_total >= 510 AND
+		name NOT IN ('Greninja','Delphox','Chesnaught') AND
+		(type1 IN ('steel','ghost','electric','fairy','poison','fire','psychic','water','dragon','normal','fighting','bug') OR
+		type2 IN ('steel','ghost','electric','fairy','poison','fire','psychic','water','dragon','normal','fighting','bug'))
+)
+SELECT pokedex_number,name,type1,type2,base_total,total_weakness
+FROM ctePossibleTeam
+WHERE rank_num = 1
+ORDER BY base_total DESC,type1,type2
+```

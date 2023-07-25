@@ -7,6 +7,7 @@ What is the Best Pokémon Team in Pokémon X&Y?
 - [Pokémon Types; Advantages and Disadvantages](#3-pokémon-types-advantages-and-disadvantages)
 - [Finding the Most Resistant Pokémon Types](#4-finding-the-most-resistant-pokémon-types)
 - [Conclusion](#5-conclusion)
+- [Project Visuals](#project-visuals)
 
 ### 1. Introduction
 
@@ -175,3 +176,6 @@ By finding the most resistant Pokémon types coupled with pokemon with high ```b
 
 While this analysis is seven years too late to settle any middle school arguments, rest assured this age old answer has been solved. If you meet any old Pokémon X & Y fans out there, feel free to wow them with this insight.
 
+---
+#### Project Visuals
+Visuals were created by author using Tableau Public. To checkout this project's visuals and discover more click [here](https://public.tableau.com/app/profile/madelyn.swor/viz/FindingtheBestTeaminPokemonXY/Dashboard1).

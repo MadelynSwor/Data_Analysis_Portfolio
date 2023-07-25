@@ -1,5 +1,13 @@
 What is the Best Pokémon Team in Pokémon X&Y?
 ======
+
+## Table of Contents
+- [Introduction](#1-introduction)
+- [Conditions for the Choosing Best Team](#2-conditions-for-the-choosing-best-team)
+- [Pokémon Types; Advantages and Disadvantages](#3-pokémon-types-advantages-and-disadvantages)
+- [Finding the Most Resistant Pokémon Types](#4-finding-the-most-resistant-pokémon-types)
+- [Conclusion](#5-conclusion)
+
 ### 1. Introduction
 
 Like many kids who grew up in the early 2000s I loved playing Pokémon. I was in the seventh grade when the sixth installment of the game, Pokémon X & Y, came out. My friends and I became obsessed. Every lunch we’d huddle around our 3DS comparing teams while one person kept lookout for the lunch monitor. While it’s been years since I’ve picked up the game, I thought it’d be fun to answer my 13 year old self’s question. What is the best Pokémon team?
@@ -47,7 +55,7 @@ The chart below shows how weak one type is against another. The lower the number
 
 Note that the chart covers the weakness for Pokémon that have one type. A Pokémon that has two types have weakness values that reflect characteristics of both types. We’ll delve into how this affects the overall resistance of a pokemon in the following section.
 
-### 4. Finding the Most Resistant Pokémon Types.
+### 4. Finding the Most Resistant Pokémon Types
 
 The 12 gym leaders in Pokémon X&Y are **bug, rock, fighting, grass, electric, fairy, psychic, ice, steel, fire, dragon, and water**. As there are 18 total types of Pokémon, we’ll use the SQL excerpt below to find which types are most resistant to the gyms.
 
@@ -158,8 +166,12 @@ Using this method of elimination of the highest ```base_total``` with types not 
 </div>    <br>
 
 
-### The Best Pokémon for each Starter Team:
-	* Greninja, Scizor, Florges, Jolteon, Venusaur, Flareon
-	* Chesnaught, Scizor, Florges, Jolteon, Kingdra, Flareon
-	* Delphox, Scizor, Florges, Jolteon, Venusaur, Kingdra
+### 5.) Conclusion
+
+By finding the most resistant Pokémon types coupled with pokemon with high ```base_total```, we’ve found the best team matchups for each starter Pokémon. <br>
+* Greninja, Scizor, Florges, Jolteon, Venusaur, Flareon <br>
+* Chesnaught, Scizor, Florges, Jolteon, Kingdra, Flareon <br>
+* Delphox, Scizor, Florges, Jolteon, Venusaur, Kingdra
+
+While this analysis is seven years too late to settle any middle school arguments, rest assured this age old answer has been solved. If you meet any old Pokémon X & Y fans out there, feel free to wow them with this insight.
 

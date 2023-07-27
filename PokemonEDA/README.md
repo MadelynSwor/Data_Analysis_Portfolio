@@ -76,6 +76,8 @@ ORDER BY AVG(total_weakness) ASC;
 ```
 <img src="https://raw.githubusercontent.com/MadelynSwor/Data_Analysis_Portfolio/main/PokemonEDA/Visuals/SQLResultQuery1.png">
 
+<img src="https://raw.githubusercontent.com/MadelynSwor/Data_Analysis_Portfolio/main/PokemonEDA/Visuals/avgWeakness.png">
+
 Looking at the output of our query, we see steel is the most resistant, whereas rock and ice are tied for being the least. In selecting resistant Pokémon for our team, we’ll limit our search to Pokémon that have at least one type in steel, ghost, electric, fairy, poison, fire, psychic, water, dragon, normal, fighting, or bug. 
 
 To limit our search further we’ll use a rank system. We’re interested in finding Pokémon with the max base total stat for each unique combination of ```type1``` and ```type2```. 

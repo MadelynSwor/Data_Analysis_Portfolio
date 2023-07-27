@@ -20,7 +20,7 @@ Before diving into the process of picking the best team, what is Pokémon? Poké
 Before we comb through the dataset there are a few things to consider.
 
 **1.)** We want types that have a higher resistance to the 12 gym leaders. <br>
->> There are 12 total gym leaders that players need to beat in order to win the game. Each leader has a team of one type. For example, the bug gym leader will have a team of all bug type Pokémon. By choosing a team with higher resistance against the gym leaders, players will have the upper hand against gym leaders. <br>
+>> There are 12 total gym leaders that players need to beat in order to win the game. Each leader has a team of one type. For example, the bug gym leader will have a team of all bug type Pokémon. By choosing a team with higher resistance against the gym leaders, players will have the upper hand. <br>
 
 **2.)** For a balanced team, all Pokémon on the team will be different types. No overlapping.<br>
 >> A Pokémon team with diverse types is better prepared for facing all opponents. This ensures our team won’t be at a disadvantage.
@@ -120,7 +120,7 @@ ORDER BY base_total DESC,type1,type2
 <img src="https://raw.githubusercontent.com/MadelynSwor/Data_Analysis_Portfolio/main/PokemonEDA/Visuals/SQLResultQuery2.png"> 
 <br>
 
-This gives us 18 potential Pokémon for our team of six. When selecting Pokémon from this list, we need to keep in mind all of our team’s types. Here’s a visual of what Pokémon from our output can be on what starter team.
+This gives us 18 potential Pokémon for our teams of six. When selecting Pokémon from this list, we need to keep in mind all of our team’s types. Here’s a visual of what Pokémon from our output can be on what starter team.
 
 <div align="center">
 <img src="https://raw.githubusercontent.com/MadelynSwor/Data_Analysis_Portfolio/main/PokemonEDA/Visuals/venndiagramStarters.png" height = "500">
@@ -144,7 +144,7 @@ The top two highest ```base_total``` are the Pokémon _Scizor_ and _Florges_. Si
 <img src="https://raw.githubusercontent.com/MadelynSwor/Data_Analysis_Portfolio/main/PokemonEDA/Visuals/delphoxTeamPT1.png"width="400">
 </div>   <br>
 
-Next we choose the next Pokémon with the highest ```base_total```, _Venusaur_. However, since venusaur is a grass poison type, it can’t be on Chesnaught’s team since Chesnaught is a grass fighting type. For Chesnaught’s team, the next Pokémon with the highest ```base_total``` that doesn’t overlap types would be _Kingdra_.
+Next we choose the next Pokémon with the highest ```base_total```, _Venusaur_. However, since _Venusaur_ is a grass poison type, it can’t be on Chesnaught’s team since Chesnaught is a grass fighting type. For Chesnaught’s team, the next Pokémon with the highest ```base_total``` that doesn’t overlap types would be _Kingdra_.
 
 <div align="center">
 <img src="https://raw.githubusercontent.com/MadelynSwor/Data_Analysis_Portfolio/main/PokemonEDA/Visuals/ChesnaughtTeamPT2.png"width="400">
@@ -176,7 +176,7 @@ By finding the most resistant Pokémon types coupled with pokemon with high ```b
 * Chesnaught, Scizor, Florges, Jolteon, Kingdra, Flareon <br>
 * Delphox, Scizor, Florges, Jolteon, Venusaur, Kingdra
 
-While this analysis is seven years too late to settle any middle school arguments, rest assured this age old answer has been solved. If you meet any old Pokémon X & Y fans out there, feel free to wow them with this insight.
+While this analysis is seven years too late to settle any middle school arguments, rest assured this age old answer has been solved. 
 
 ---
 #### Project Visuals

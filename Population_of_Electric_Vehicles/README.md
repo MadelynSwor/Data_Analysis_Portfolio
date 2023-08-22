@@ -54,10 +54,13 @@ Before jumping into our questions, let's go over a few terms that'll come up thr
 > The oldest electric vehicle in WA is a Chevrolet with a model year of 1997.
 
 #### 8.) What's the distribution of vehicles by model year?
-> There's been a steady increase of registered EVs save for 2019 and 2014. The highest population of EVs are 2023 models. Even though by the time the dataset was recorded half way through the year, 2023 models have all other model years beat.
+> There's been a steady increase of registered EVs save for 2019 and 2014. The highest population of EVs are 2023 models. Note that even though this dataset is from July 2023, consumers were able to buy 2023 models in 2022. 
 
 #### 9.) How many cars are eligible for CAFV?
 > Out of the models that have had their CAFV researched, 78% of vehicles qualify. It's important to note that models from 2019 to 2024 are 'Unknown' whether they qualify as listed as in the process of being researched by WA.
+
+#### 10.) What's the average electric range for BEVs and PHEVs?
+>
 
 ### Analysis
 1.) One interesting thing is that as early as 1997 there's been BEVs. What happened to the decline of early models?

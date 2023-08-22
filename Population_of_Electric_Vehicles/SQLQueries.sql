@@ -82,20 +82,15 @@ FROM electric_vehicle_population
 WHERE clean_alternative_fuel_vehicle_eligibility != 'Unknown'
 GROUP BY clean_alternative_fuel_vehicle_eligibility
 ORDER BY COUNT(*) DESC;
-
 -----------------------------------------------------------------------------------------
--- 10.) The first character in a VIN states country of origin. How many models are in WA
--- by country of origin?
+-- 10.) What's the average electric range for BEVs and PHEVs?
 
-CREATE TABLE #originCountry (
-	country NVARCHAR(100),
-	country_code NVARCHAR(1)
-);
+WITH cte_find_myear AS (
+SELECT make, model, electric_vehicle_type, clean_alternative_fuel_vehicle_eligibility, model_year,electric_range
+FROM electric_vehicle_population
+WHERE electric_range = 0 AND electric_vehicle_type LIKE '%(BEV)%') 
 
-INSERT INTO #originCountry
-SELECT LEFT(vin,1)
-FROM electric_vehicle_population;
-
-
-SELECT DISTINCT(LEFT(vin,1))
-FROM electric_vehicle_population;
+SELECT make, model, model_year, COUNT(model_year) AS count_myear
+FROM cte_find_myear
+GROUP BY make, model, model_year
+ORDER BY COUNT(model_year) DESC

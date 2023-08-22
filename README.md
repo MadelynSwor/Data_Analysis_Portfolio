@@ -7,7 +7,7 @@
 ---
 * [SQL](#sql)
 * [Python](#python)
-* [Tableau](#tableau)
+* [Visualizations](#visualizations)
 
 ---
 
@@ -25,7 +25,7 @@
 
 ---
 
-# Tableau
-| Project Link | Description | Dashboard |
-|---|---|---|
-|:dragon:[Best Pokemon Team](https://github.com/MadelynSwor/Data_Analysis_Portfolio/tree/main/PokemonEDA)|`Insert Description`| [Dashboard](https://public.tableau.com/app/profile/madelyn.swor/viz/FindingtheBestTeaminPokemonXY/Dashboard1)
+# Visualizations
+| Project Link | Description | Tools | Dashboard |
+|---|---|---|---|
+|:dragon:[Best Pokemon Team](https://github.com/MadelynSwor/Data_Analysis_Portfolio/tree/main/PokemonEDA)|`Insert Description`| Tableau | [Dashboard](https://public.tableau.com/app/profile/madelyn.swor/viz/FindingtheBestTeaminPokemonXY/Dashboard1)

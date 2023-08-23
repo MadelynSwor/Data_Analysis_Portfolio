@@ -125,10 +125,17 @@ GROUP BY model_year
 ORDER BY model_year DESC;
 
 -----------------------------------------------------------------------------------------
--- 13.) How many cars are eligible for CAFV tax exemption?
+-- 13.) How many cars are eligible for CAFV tax exemption based on vehicle type?
 
-SELECT clean_alternative_fuel_vehicle_eligibility, COUNT(*) as total
-FROM electric_vehicle_population
-WHERE clean_alternative_fuel_vehicle_eligibility != 'Unknown'
-GROUP BY clean_alternative_fuel_vehicle_eligibility
-ORDER BY COUNT(*) DESC;
+WITH count_CAFV AS (
+	SELECT electric_vehicle_type, clean_alternative_fuel_vehicle_eligibility,
+		DENSE_RANK() OVER(ORDER BY electric_vehicle_type DESC) as ev_type -- rank 1 = PHEVs,rank 2 = BEVs
+	FROM electric_vehicle_population 
+	WHERE clean_alternative_fuel_vehicle_eligibility != 'Unknown')
+
+SELECT electric_vehicle_type, COUNT(ev_type) AS total_CAFV_eligible
+FROM count_CAFV
+WHERE clean_alternative_fuel_vehicle_eligibility != 'No'
+GROUP BY electric_vehicle_type
+ORDER BY COUNT(ev_type) DESC;
+

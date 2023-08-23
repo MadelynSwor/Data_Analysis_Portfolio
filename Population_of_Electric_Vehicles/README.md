@@ -37,9 +37,11 @@ Before jumping into our questions, let's go over a few terms that'll come up thr
 SELECT COUNT(DISTINCT make) AS total_makes
 FROM electric_vehicle_population;
 ```
+<img src="https://raw.githubusercontent.com/MadelynSwor/Data_Analysis_Portfolio/main/Population_of_Electric_Vehicles/images/Q1.png" height="50" >
 
-> There are 37 distintive makes
+> There are 37 different makes.
 
+----
 #### 2.) How many vehicles are there for each make?
 ```SQL
 SELECT make, COUNT(*) AS count_make
@@ -47,8 +49,11 @@ FROM electric_vehicle_population
 GROUP BY make
 ORDER BY COUNT(*) DESC;
 ```
-> [input table output]. The leading make is Tesla with nearly half of all EVs in WA with 65,552 vehicles. The lowest is tied with 3 vehicles in WA, Bentley and Wheego Electric Cars.
+<img src=https://raw.githubusercontent.com/MadelynSwor/Data_Analysis_Portfolio/main/Population_of_Electric_Vehicles/images/Q2.png>
 
+> The leading make is Tesla with nearly half of all EVs in WA with 65,552 vehicles. The lowest is tied with 3 vehicles in WA, Bentley and Wheego Electric Cars.
+
+----
 #### 3.) What's the average electric range for BEVs and PHEVs?
 ```SQL
 SELECT electric_vehicle_type, ROUND(AVG(electric_range),0,1) AS avg_electric_range
@@ -57,8 +62,11 @@ WHERE electric_range != 0
 GROUP BY electric_vehicle_type 
 ORDER BY AVG(electric_range) DESC;
 ```
-> [SHOW OUTPUT]
+<img src=https://raw.githubusercontent.com/MadelynSwor/Data_Analysis_Portfolio/main/Population_of_Electric_Vehicles/images/Q3.png>
 
+> Do note that the if the electric range included newer BEV models, the average would be higher.
+
+----
 #### 4.) What vehicle model and model year have the highest electric range for each make?
 ```SQL
 WITH highest_range AS (
@@ -72,8 +80,11 @@ FROM highest_range
 WHERE rank_num = 1
 ORDER BY electric_range DESC;
 ```
-> [Show output] Note that this excludes cars that have haven't had their CAFV elgibility researched.
+<img src=https://raw.githubusercontent.com/MadelynSwor/Data_Analysis_Portfolio/main/Population_of_Electric_Vehicles/images/Q4.png>
 
+> Note that this excludes cars that have haven't had their CAFV elgibility researched. A large majority of BEVs starting from 2019 to 2024 have not had their CAFV researched by WA State.
+
+----
 #### 5.) What's the average electric range by model year?
 ```SQL
 WITH avg_range AS (
@@ -96,8 +107,11 @@ FROM renamed_avg_range
 GROUP BY renamed_ev_type, model_year
 ORDER BY renamed_ev_type, model_year DESC;
 ```
-> [SHOW OUTPUT]
+<img src=https://raw.githubusercontent.com/MadelynSwor/Data_Analysis_Portfolio/main/Population_of_Electric_Vehicles/images/Q5.png>
 
+> With some exceptions, there's a steady increase of electric range for both BEVs and PHEVs. Between 2019-2024 for BEVs there are less data to draw from due to CAFV eligibility unknown.
+
+----
 #### 6.) How many different PHEV and BEV models does each make have in WA?
 ```SQL
 WITH count_types AS (
@@ -110,8 +124,10 @@ FROM count_types
 GROUP BY make, electric_vehicle_type
 ORDER BY make, COUNT(DISTINCT model) DESC;
 ```
+
 > 22 out of 37 makes only specialize in one type, making only PHEV or BEV models. However, 27 out of 37 of these makes have at least one BEV model.
 
+----
 #### 7.) What 5 counties have the most registered electric vehicles?
 ```SQL
 SELECT county, COUNT(*) AS total_for_county
@@ -120,15 +136,22 @@ GROUP BY county
 ORDER BY COUNT(*) DESC
 OFFSET 0 ROWS FETCH FIRST 5 ROWS ONLY;
 ```
-> [Show output][then put a map up of counties in WA]. Looking at the map of counties we see that the top 5 counties all border one another. King County contains Seattle, the largest city in WA and Clark County is located near Portland, Oregon, which is Oregon's largest city.
 
+<img src=https://raw.githubusercontent.com/MadelynSwor/Data_Analysis_Portfolio/main/Population_of_Electric_Vehicles/images/Q7.png>
+
+> Looking at the map of counties we see that the top 5 counties all border one another. King County contains Seattle, the largest city in WA and Clark County is located near Portland, Oregon, which is Oregon's largest city.
+
+----
 #### 8.) What Percentage of of registered cars are electric vehicles?
 ```SQL
 SELECT ROUND(COUNT(*)*1.0/2977074*100.0,1) AS percentage_EV -- *1.0 to ensure decimal division
 FROM electric_vehicle_population;
 ```
+<img src=https://raw.githubusercontent.com/MadelynSwor/Data_Analysis_Portfolio/main/Population_of_Electric_Vehicles/images/Q8.png>
+
 > Currently 5% of registered cars are electric.
 
+----
 #### 9.) What percentage of electric vehicles are BEVs or PHEVs?
 ```SQL
 SELECT electric_vehicle_type, COUNT(*) AS total, COUNT(*)/143596.0*100.0 AS percent_total
@@ -136,8 +159,11 @@ FROM electric_vehicle_population
 GROUP BY electric_vehicle_type
 ORDER BY COUNT(*) DESC;
 ```
+<img src=https://raw.githubusercontent.com/MadelynSwor/Data_Analysis_Portfolio/main/Population_of_Electric_Vehicles/images/Q9.png>
+
 > 77% of electric cars in WA are BEV while only 23% are PHEV.
 
+----
 #### 10.) How many models does each make have?
 ```SQL
 SELECT make, COUNT(DISTINCT(model)) AS model_count
@@ -145,8 +171,11 @@ FROM electric_vehicle_population
 GROUP BY make
 ORDER BY COUNT(DISTINCT(model)) DESC;
 ```
+<img src=https://raw.githubusercontent.com/MadelynSwor/Data_Analysis_Portfolio/main/Population_of_Electric_Vehicles/images/Q10.png>
+
 > BMW and Audi are tied with having 11 different models in WA.
 
+----
 #### 11.) What's the oldest model year for each make in WA?
 ```SQL
 SELECT make, MIN(model_year) AS oldest_model_year
@@ -155,8 +184,11 @@ WHERE electric_vehicle_type LIKE '%BEV%'
 GROUP BY make
 ORDER BY MIN(model_year) ASC;
 ```
-> The oldest electric vehicle in WA is a Chevrolet with a model year of 1997.
+<img src=https://raw.githubusercontent.com/MadelynSwor/Data_Analysis_Portfolio/main/Population_of_Electric_Vehicles/images/Q11.png>
 
+> Starting in 2019, there have been 12 companies that have started creating electric vehicles. Though interesting enough, the oldest electric vehicle in WA is a Chevrolet with a model year of 1997. 
+
+----
 #### 12.) What's the distribution of vehicles by model year?
 ```SQL
 SELECT model_year, COUNT(*) AS total_per_model_year
@@ -165,8 +197,11 @@ WHERE model_year != 2024 -- Get rid of early releases
 GROUP BY model_year
 ORDER BY model_year DESC;
 ```
+<img src=https://raw.githubusercontent.com/MadelynSwor/Data_Analysis_Portfolio/main/Population_of_Electric_Vehicles/images/Q12.png>
+
 > There's been a steady increase of registered EVs save for 2019 and 2014. The highest population of EVs are 2023 models. Note that even though this dataset is from July 2023, consumers were able to buy 2023 models in 2022. 
 
+----
 #### 13.) How many cars are eligible for CAFV?
 ```SQL
 WITH count_CAFV AS (
@@ -181,6 +216,8 @@ WHERE clean_alternative_fuel_vehicle_eligibility != 'No'
 GROUP BY electric_vehicle_type
 ORDER BY COUNT(ev_type) DESC;
 ```
+<img src=https://raw.githubusercontent.com/MadelynSwor/Data_Analysis_Portfolio/main/Population_of_Electric_Vehicles/images/Q13.png>
+
 > Out of the models that have had their CAFV researched, 78% of vehicles qualify. It's important to note that models from 2019 to 2024 are 'Unknown' whether they qualify as listed as in the process of being researched by WA.
 
 ## Analysis

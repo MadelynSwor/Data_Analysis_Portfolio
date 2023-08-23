@@ -34,7 +34,7 @@ Before jumping into our questions, let's go over a few terms that'll come up thr
 ## EDA with SQL
 #### 1.) Find how many distinct makes there are?
 ```SQL
-SELECT DISTINCT(make)
+SELECT COUNT(DISTINCT make) AS total_makes
 FROM electric_vehicle_population;
 ```
 
@@ -55,7 +55,7 @@ SELECT electric_vehicle_type, ROUND(AVG(electric_range),0,1) AS avg_electric_ran
 FROM electric_vehicle_population
 WHERE electric_range != 0
 GROUP BY electric_vehicle_type 
-ORDER BY AVG(electric_range) DESC
+ORDER BY AVG(electric_range) DESC;
 ```
 > [SHOW OUTPUT]
 
@@ -108,9 +108,9 @@ WITH count_types AS (
 SELECT make, electric_vehicle_type, COUNT(DISTINCT model) AS num_models
 FROM count_types
 GROUP BY make, electric_vehicle_type
-ORDER BY make, COUNT(DISTINCT model) DESC
+ORDER BY make, COUNT(DISTINCT model) DESC;
 ```
-> Nearly half of makes have only specialize in one type, making only PHEV or BEV models.
+> 22 out of 37 makes only specialize in one type, making only PHEV or BEV models. However, 27 out of 37 of these makes have at least one BEV model.
 
 #### 7.) What 5 counties have the most registered electric vehicles?
 ```SQL
@@ -184,7 +184,7 @@ ORDER BY COUNT(ev_type) DESC;
 > Out of the models that have had their CAFV researched, 78% of vehicles qualify. It's important to note that models from 2019 to 2024 are 'Unknown' whether they qualify as listed as in the process of being researched by WA.
 
 ## Analysis
-From our exploration, we've found that a majority of electric vehicles in Washington State are Battery Electric Vehicles (BEVs). This demonstrates a growing market for BEVs by consumer demand. This is reflected by the fact that 27 out of 37 makes have at least one BEV model if not multiple. A large number of consumers also own vehicles with a model year of 2023. As of now 5% of WA State registered cars are electric. However, as companies continue to improve BEVs and more infastructure is built, this number will continue to increase. If companies haven't already, this is the time for brands to consider creating more electric models.
+From our exploration, we've found that a majority of electric vehicles in Washington State are Battery Electric Vehicles (BEVs). This demonstrates a growing market for BEVs by consumer demand. This is reflected by the fact that 27 out of 37 makes have at least one BEV model if not multiple. A large number of consumers also own vehicles with a model year of 2023. As of now 5% of WA State registered cars are electric. However, as companies continue to improve BEVs and more infastructure is built, this number will continue to increase. Starting in 2019, there have been 12 companies that have started creating electric vehicles. If companies haven't already, this is the time for brands to consider creating more electric models. 
 
 ## Sources
 * The number of registered cars, (2,977,074), is located at [statista](https://www.statista.com/statistics/196010/total-number-of-registered-automobiles-in-the-us-by-state/)

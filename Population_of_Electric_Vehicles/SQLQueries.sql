@@ -4,7 +4,7 @@
 -----------------------------------------------------------------------------------------
 -- 1.) Find how many distinct makes there are?
 
-SELECT DISTINCT(make)
+SELECT COUNT(DISTINCT make) AS total_makes
 FROM electric_vehicle_population;
 
 -----------------------------------------------------------------------------------------
@@ -22,7 +22,7 @@ SELECT electric_vehicle_type, ROUND(AVG(electric_range),0,1) AS avg_electric_ran
 FROM electric_vehicle_population
 WHERE electric_range != 0
 GROUP BY electric_vehicle_type 
-ORDER BY AVG(electric_range) DESC
+ORDER BY AVG(electric_range) DESC;
 
 -----------------------------------------------------------------------------------------
 -- 4.) What vehicle model and model year have the highest electric range for each make?
@@ -72,7 +72,7 @@ WITH count_types AS (
 SELECT make, electric_vehicle_type, COUNT(DISTINCT model) AS num_models
 FROM count_types
 GROUP BY make, electric_vehicle_type
-ORDER BY make, COUNT(DISTINCT model) DESC
+ORDER BY make, COUNT(DISTINCT model) DESC;
 
 -----------------------------------------------------------------------------------------
 -- 7.) What 5 counties have the most registered electric vehicles?

@@ -38,29 +38,38 @@ Before jumping into our questions, let's go over a few terms that'll come up thr
 #### 2.) How many vehicles are there for each make?
 > [input table output]. The leading make is Tesla with nearly half of all EVs in WA with 65,552 vehicles. The lowest is tied with 3 vehicles in WA, Bentley and Wheego Electric Cars.
 
-#### 3.) What 5 counties have the most registered electric vehicles?
+#### 3.) What's the average electric range for BEVs and PHEVs?
+> [SHOW OUTPUT]
+
+#### 4.) What vehicle model and model year have the highest electric range for each make?
+> [Show output] Note that this excludes cars that have haven't had their CAFV elgibility researched.
+
+#### 5.) What's the average electric range by model year?
+> [SHOW OUTPUT]
+
+#### 6.) How many different PHEV and BEV models does each make have in WA?
+> Nearly half of makes have only specialize in one type, making only PHEV or BEV models.
+
+#### 7.) What 5 counties have the most registered electric vehicles?
 > [Show output][then put a map up of counties in WA]. Looking at the map of counties we see that the top 5 counties all border one another. King County contains Seattle, the largest city in WA and Clark County is located near Portland, Oregon, which is Oregon's largest city.
 
-#### 4.) What Percentage of of registered cars are electric vehicles?
+#### 8.) What Percentage of of registered cars are electric vehicles?
 > Currently 5% of registered cars are electric.
 
-#### 5.) What percentage of electric vehicles are BEVs or PHEVs?
+#### 9.) What percentage of electric vehicles are BEVs or PHEVs?
 > 77% of electric cars in WA are BEV while only 23% are PHEV.
 
-#### 6.) How many models does each make have?
+#### 10.) How many models does each make have?
 > BMW and Audi are tied with having 11 different models in WA.
 
-#### 7.) What's the oldest model year for each make in WA?
+#### 11.) What's the oldest model year for each make in WA?
 > The oldest electric vehicle in WA is a Chevrolet with a model year of 1997.
 
-#### 8.) What's the distribution of vehicles by model year?
+#### 12.) What's the distribution of vehicles by model year?
 > There's been a steady increase of registered EVs save for 2019 and 2014. The highest population of EVs are 2023 models. Note that even though this dataset is from July 2023, consumers were able to buy 2023 models in 2022. 
 
-#### 9.) How many cars are eligible for CAFV?
+#### 13.) How many cars are eligible for CAFV?
 > Out of the models that have had their CAFV researched, 78% of vehicles qualify. It's important to note that models from 2019 to 2024 are 'Unknown' whether they qualify as listed as in the process of being researched by WA.
-
-#### 10.) What's the average electric range for BEVs and PHEVs?
->
 
 ### Analysis
 1.) One interesting thing is that as early as 1997 there's been BEVs. What happened to the decline of early models?

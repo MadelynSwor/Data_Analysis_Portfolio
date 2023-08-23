@@ -1,5 +1,5 @@
 ﻿/*
-   Cleaning Dataset with SQL
+   Cleaning Dataset and Wrangling with SQL
    Dataset: https://catalog.data.gov/dataset/electric-vehicle-population-data
 
    Notes on Cleaning: 
